@@ -3,13 +3,10 @@ name: CI pipeline
 on:
   push:
     branches:
-      - '**'
-    tags-ignore:
-      - 'v*' # this tag type is used for release pipelines
+      - 'main'
 
 jobs:
   ci-pipeline:
-
     runs-on: ubuntu-latest
     strategy:
       max-parallel: 4
@@ -40,13 +37,5 @@ jobs:
         run: |
           echo "Launching unit tests"
           pytest tests/unit
-
-      - name: Workflow deployment (assets only upload)
-        run: |
-          dbx deploy gdal_rasterio_demo-sample-etl --assets-only
-
-      - name: Run the workflow in a jobless fashion
-        run: |
-          dbx launch gdal_rasterio_demo-sample-etl --from-assets --trace
 
 

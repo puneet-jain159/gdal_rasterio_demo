@@ -6,7 +6,6 @@ Please follow the `entry_points` documentation for more details on how to config
 """
 
 from setuptools import find_packages, setup
-from gdal_rasterio_demo import __version__
 
 PACKAGE_REQUIREMENTS = ["pyyaml"]
 
@@ -39,7 +38,7 @@ setup(
             "etl = gdal_rasterio_demo.tasks.sample_etl_task:entrypoint",
             "ml = gdal_rasterio_demo.tasks.sample_ml_task:entrypoint",
     ]},
-    version=__version__,
+    version='0.0.1',
     description="",
     author="",
 )

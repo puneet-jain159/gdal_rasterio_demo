@@ -45,7 +45,8 @@ dbutils.notebook.run("./initialize_config", 300 ,{"catalog_name" : catalog_name,
 # COMMAND ----------
 
 # Get Raw file information
-df_raw = spark.readStream.table(f"{schema_name}.{raw_filename}")
+# df_raw = spark.readStream.table(f"{schema_name}.{raw_filename}")
+# df_raw = spark.read.table(f"{schema_name}.{raw_filename}")
 
 # COMMAND ----------
 

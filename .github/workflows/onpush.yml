@@ -33,9 +33,13 @@ jobs:
         run: |
           pip install -e ".[local,test]"
 
-      - name: Run unit tests
+      - name: Clone the repository
         run: |
-          echo "Launching unit tests"
-          pytest tests/unit
+            databricks repos create --url https://github.com/puneet-jain159/gdal_rasterio_demo.git --provider gitHub --path /Repos/puneet.jain159@gmail.com/gdal-rasterio-demo
+
+      - name: Create the workflow
+        run: |
+          echo "Creating the workflow"
+          dbx deploy --workflows=gdal_rasterio_demo_dbx --no-package
 
 

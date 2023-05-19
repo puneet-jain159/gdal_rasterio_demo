@@ -35,7 +35,7 @@ jobs:
 
       - name: Clone the repository
         run: |
-            databricks repos create --url https://github.com/puneet-jain159/gdal_rasterio_demo.git --provider gitHub --path /Repos/puneet.jain159@gmail.com/gdal-rasterio-demo
+            databricks repos create --url https://github.com/puneet-jain159/gdal_rasterio_demo.git --provider gitHub --path /Repos/puneet.jain@databricks.com/gdal-rasterio-demo
 
       - name: Create the workflow
         run: |

@@ -39,6 +39,7 @@ jobs:
             databricks repos create --url https://github.com/puneet-jain159/gdal_rasterio_demo.git --provider gitHub --path /Repos/puneet.jain@databricks.com/gdal-rasterio-demo
 
       - name: Clone the repository if not exist
+        continue-on-error: true
         run: |
             databricks repos update --path /Repos/puneet.jain@databricks.com/gdal-rasterio-demo --branch main
     

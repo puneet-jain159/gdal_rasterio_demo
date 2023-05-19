@@ -75,5 +75,5 @@ raw_df.write.mode("overwrite").option("overwriteSchema", "true").saveAsTable(f"{
 
 # COMMAND ----------
 
-# MAGIC %sql
-# MAGIC Drop table image_puneet.raw
+# MAGIC # %sql
+# MAGIC # Drop table image_puneet.raw
